@@ -1,0 +1,41 @@
+############################### input Parameters for Dataexportservice#####################################################
+
+HDFS To S3
+
+{
+  "s3_credentials":{"aws_access_key_id": "",
+  "aws_secret_access_key": "",
+  "aes_encryption_enabled": "n"},
+  "source_path": "hdfs:///tmp/edltest",
+  "target_path": "s3n://edl2-databricks-test",
+  "export_type": "hdfsToS3"
+}
+
+
+
+
+
+SQOOP 
+
+{"db_type": "mysql",
+"db_name": "airflow",
+"user_name": "airflow",
+"password": "airflow",
+"table_name": "kombu_queue ",
+"destination":"s3n://aws-public-key:aws-private-key@bucket/filename",
+"db_host":"cld-sapp-air44",
+"db_port":"3306",
+"export_type":"dbexport"}
+
+Local to S3 
+
+{
+  "aws_access_key_id" : "",
+  "aws_secret_access_key" : "",
+  "bucket_name" : "",
+  "destination_file" : "LocalToS3.py",
+  "source_file" : "",
+  "export_type":"localToS3"
+}
+
+
